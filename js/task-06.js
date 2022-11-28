@@ -8,7 +8,7 @@ const getLength = (event) => {
 input.addEventListener("input", getLength);
 const isValid = (event) => {
   const inputLength = event.target.value.length;
-  if (inputLength !== 6) {
+  if (inputLength !== Number(input.dataset.length)) {
     // console.log("invalid");
     // console.log(input.classList);
     input.classList.remove("valid");
