@@ -7,9 +7,10 @@ const checkFields = (event) => {
   } = event.currentTarget;
 
   if (email.value === "" || password.value === "") {
-    return console.log("Please fill in all the fields!");
+    return alert("Please fill in all the fields!");
   }
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  const user = { Email: "${ email.value }", Password: "${ password.value }" };
+  console.log(user);
   event.currentTarget.reset();
 };
 formEl.addEventListener("submit", checkFields);
