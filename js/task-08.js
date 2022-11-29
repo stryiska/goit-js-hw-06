@@ -9,7 +9,7 @@ const checkFields = (event) => {
   if (email.value === "" || password.value === "") {
     return alert("Please fill in all the fields!");
   }
-  const user = { Email: "${ email.value }", Password: "${ password.value }" };
+  const user = { Email: email.value, Password: password.value };
   console.log(user);
   event.currentTarget.reset();
 };
